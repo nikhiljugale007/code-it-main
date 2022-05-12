@@ -16,48 +16,52 @@ import { useAuth0 } from "@auth0/auth0-react";
 const axios = require("axios");
 
 function App() {
-	const { isAuthenticated, user } = useAuth0();
+  const { isAuthenticated, user } = useAuth0();
 
-	// useEffect(() => {
-	// 	alert("LOGIN");
+  // useEffect(() => {
+  // 	alert("LOGIN");
 
-	// 	if (isAuthenticated) {
-	// 		var in_data = {
-	// 			email: user.email,
-	// 			problemsolved: [],
-	// 		};
-	// 		axios
-	// 			.post(
-	// 				"https://codekit-user-registration.herokuapp.com/api/auth/",
-	// 				in_data
-	// 			)
-	// 			.then((response) => {
-	// 				alert("r= " + response);
-	// 				console.log(response);
-	// 			})
-	// 			.catch((error) => {
-	// 				alert("e= " + error);
-	// 			});
-	// 	} else {
-	// 		alert("Not authencted");
-	// 	}
-	// }, [isAuthenticated]);
-	return (
-		<>
-			<Header_fun />
-			<Switch>
-				<Route exact path="/" component={Home}></Route>
-				<Route exact path="/profile" component={Profile}></Route>
-				<Route exact path="/problems" component={Practise}></Route>
-				<Route exact path="/contest" component={Contest}></Route>
-				<Route exact path="/career" component={Career}></Route>
-				<Route exact path="/user" component={Home}></Route>
-				<Route exact path="/online_ide" component={Online_IDE}></Route>
-				<Route exact path="/problems/:slug" component={SingleQuestion}></Route>
-				<Route component={Error} />
-			</Switch>
-		</>
-	);
+  // 	if (isAuthenticated) {
+  // 		var in_data = {
+  // 			email: user.email,
+  // 			problemsolved: [],
+  // 		};
+  // 		axios
+  // 			.post(
+  // 				"https://codekit-user-registration.herokuapp.com/api/auth/",
+  // 				in_data
+  // 			)
+  // 			.then((response) => {
+  // 				alert("r= " + response);
+  // 				console.log(response);
+  // 			})
+  // 			.catch((error) => {
+  // 				alert("e= " + error);
+  // 			});
+  // 	} else {
+  // 		alert("Not authencted");
+  // 	}
+  // }, [isAuthenticated]);
+  return (
+    <>
+      <Header_fun />
+      <Switch>
+        <Route exact path="/" component={Home}></Route>
+        <Route exact path="/profile" component={Profile}></Route>
+        <Route exact path="/problems" component={Practise}></Route>
+        <Route exact path="/contest" component={Contest}></Route>
+        <Route exact path="/career" component={Career}></Route>
+        <Route exact path="/user" component={Home}></Route>
+        <Route exact path="/online_ide" component={Online_IDE}></Route>
+        <Route
+          exact
+          path="/problems/:problem_id"
+          component={SingleQuestion}
+        ></Route>
+        <Route component={Error} />
+      </Switch>
+    </>
+  );
 }
 
 export default App;
