@@ -91,7 +91,7 @@ const Practise = () => {
                 <th>#</th>
                 <th>Question</th>
                 <th>Difficulty</th>
-                <th>Submissions</th>
+                <th>Points</th>
                 <th>Status</th>
               </tr>
             </thead>
@@ -104,7 +104,7 @@ const Practise = () => {
                         <td>{index + 1}</td>
                         <td>{question.question_name}</td>
                         <td>{question.difficulty}</td>
-                        <td>{question.submissions}</td>
+                        <td>{question.points}</td>
                         <td>
                           <a href={question.question_link} target="blank">
                             <button type="button" class="btn btn-success">
@@ -120,7 +120,7 @@ const Practise = () => {
                           <td>{index + 1}</td>
                           <td>{question.question_name}</td>
                           <td>{question.difficulty}</td>
-                          <td>{question.submissions}</td>
+                          <td>{question.points}</td>
                           <td>
                             <Link to={`/problems/${question._id}`}>
                               <button type="button" class="btn btn-success">
