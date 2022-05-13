@@ -2,9 +2,8 @@ import React from "react";
 import BlogTopic from "../components/BlogTopic";
 import { useEffect, useState } from "react";
 import ReactLoading from "react-loading";
-
 import { Card, Button, Container, Row, Col } from "react-bootstrap";
-
+import { careerData } from "./CareerData.js";
 const Blogs = () => {
   const [careerList, setCareerList] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -47,7 +46,7 @@ const Blogs = () => {
         <Container fluid style={{ padding: "10px", margin: "10px" }}>
           <Row>
             {/* <Col> */}
-            {careerList.map((career, index) => (
+            {careerData.map((career, index) => (
               <Card style={{ margin: "auto", width: "80%" }}>
                 <Card.Body>
                   <Card.Title>
@@ -60,14 +59,9 @@ const Blogs = () => {
                     <span style={{ color: "#0275d8", fontWeight: "bold" }}>
                       Company Name:
                     </span>{" "}
-                    {career.company_name}
+                    {career.companyName}
                   </Card.Title>
-                  <Card.Text>
-                    <span style={{ color: "#0275d8", fontWeight: "bold" }}>
-                      Eligible Batches:
-                    </span>{" "}
-                    {career.eligible_batches}
-                  </Card.Text>
+
                   <Card.Text>
                     {" "}
                     <span style={{ color: "#0275d8", fontWeight: "bold" }}>
@@ -75,16 +69,10 @@ const Blogs = () => {
                     </span>{" "}
                     {career.description}
                   </Card.Text>
-                  <Card.Text>
-                    {" "}
-                    <span style={{ color: "#0275d8", fontWeight: "bold" }}>
-                      orange text
-                    </span>{" "}
-                    : {career.apply_link}
-                  </Card.Text>
-                  {/* <a href={career.apply_link} target="_blank">
-									<Button variant="primary">Apply </Button>
-								</a> */}
+
+                  <a href={career.applyLink} target="_blank" rel="noreferrer">
+                    <Button variant="primary">Apply </Button>
+                  </a>
                 </Card.Body>
               </Card>
             ))}
