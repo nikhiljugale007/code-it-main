@@ -128,7 +128,6 @@ const SingleQuestion = (props) => {
                   enableLiveAutocompletion="true"
                   editorProps={{ $blockScrolling: true }}
                   value={code}
-                  onChange={onChange}
                 />
                 <button
                   onClick={evaluateCode}

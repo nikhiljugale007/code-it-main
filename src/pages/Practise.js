@@ -106,11 +106,11 @@ const Practise = () => {
                         <td>{question.difficulty}</td>
                         <td>{question.submissions}</td>
                         <td>
-                          <Link to={`/problems/${question._id}`}>
+                          <a href={question.question_link} target="blank">
                             <button type="button" class="btn btn-success">
                               Solve
                             </button>
-                          </Link>
+                          </a>
                         </td>
                       </tr>
                     ))
@@ -214,3 +214,4 @@ const Practise = () => {
 };
 
 export default Practise;
+// 7743839037

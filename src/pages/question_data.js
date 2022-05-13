@@ -13,6 +13,8 @@ export const question_data = [
     constaints: "1≤T≤100 1≤L≤R≤105",
     sample_input: "3 <br/> 1 2 <br/> 3 1 <br/> 2021 42",
     sample_output: "Chef <br/> Divyam  <br/>Divyam",
+    question_link:
+      "https://1236d10a.widgets.sphere-engine.com/lp?hash=7WUktUkpbA",
   },
   {
     _id: 2,
@@ -28,6 +30,8 @@ export const question_data = [
     constaints: "1≤T≤106 <br/> 1≤X,Y≤106",
     sample_input: "3 <br/> 1 2 <br/> 3 1 <br/> 2021 42",
     sample_output: "Chef <br/> Divyam  <br/>Divyam",
+    question_link:
+      "https://1236d10a.widgets.sphere-engine.com/lp?hash=7WUktUkpbA",
   },
   {
     _id: 3,
@@ -43,5 +47,7 @@ export const question_data = [
     constaints: "1≤T≤106 <br/> 1≤X,Y≤106",
     sample_input: "3 <br/> 1 2 <br/> 3 1 <br/> 2021 42",
     sample_output: "Chef <br/> Divyam  <br/>Divyam",
+    question_link:
+      "https://1236d10a.widgets.sphere-engine.com/lp?hash=7WUktUkpbA",
   },
 ];
